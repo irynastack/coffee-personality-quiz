@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 4 - Warm & Cozy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(160deg, #F5E6D3 0%, #EDD5B3 50%, #E8C99A 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 52px;
+    max-width: 560px;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 8px 40px rgba(139, 90, 43, 0.12);
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .label {
+    font-size: 12px;
+    color: #B07D4A;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .counter { font-size: 13px; color: #C49A6C; }
+  .progress-bar {
+    height: 4px;
+    background: #EDD5B3;
+    border-radius: 2px;
+    margin-bottom: 40px;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #C49A6C, #8B5A2B);
+    border-radius: 2px;
+  }
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #3D2B1F;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option {
+    border: 2px solid #E8D5BC;
+    border-radius: 14px;
+    padding: 18px 22px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #5C3D2E;
+    transition: all 0.2s;
+    font-weight: 400;
+    background: rgba(255,255,255,0.5);
+  }
+  .option:hover { border-color: #C49A6C; background: rgba(255,255,255,0.8); }
+  .option.selected { border-color: #8B5A2B; background: #FFF8F0; color: #3D2B1F; font-weight: 500; }
+  .coffee-icon { margin-right: 10px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <span class="label">☕ Style 4: Warm & Cozy</span>
+    <span class="counter">Question 2 of 5</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+  <h1>It's Friday night. You and your friends are picking a movie. What do you choose?</h1>
+  <div class="options">
+    <div class="option">🧙 An epic fantasy with a 3-hour runtime</div>
+    <div class="option selected">🛋️ A cozy rom-com everyone knows by heart</div>
+    <div class="option">🤝 Whatever the group wants — you just want to hang</div>
+  </div>
+</div>
+</body>
+</html>

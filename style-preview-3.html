@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 3 - Bold & Dramatic</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #0A0A0A;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: #111;
+    border-radius: 20px;
+    padding: 52px;
+    max-width: 560px;
+    width: 100%;
+    border: 1px solid #222;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .badge {
+    font-size: 12px;
+    color: #F5C518;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .counter { font-size: 13px; color: #555; }
+  .progress-bar {
+    height: 3px;
+    background: #222;
+    border-radius: 2px;
+    margin-bottom: 44px;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #F5C518, #FF6B35);
+    border-radius: 2px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 36px;
+    line-height: 1.4;
+  }
+  .options { display: flex; flex-direction: column; gap: 14px; }
+  .option {
+    border: 1px solid #2A2A2A;
+    border-radius: 12px;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #AAA;
+    transition: all 0.2s;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+  }
+  .option::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: transparent;
+    transition: background 0.2s;
+  }
+  .option:hover { border-color: #F5C518; color: white; }
+  .option:hover::before { background: #F5C518; }
+  .option.selected { border-color: #F5C518; color: white; background: #1A1800; }
+  .option.selected::before { background: #F5C518; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <span class="badge">☕ Style 3: Bold & Dramatic</span>
+    <span class="counter">2 / 5</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+  <h1>It's Friday night. You and your friends are picking a movie. What do you choose?</h1>
+  <div class="options">
+    <div class="option">An epic fantasy with a 3-hour runtime</div>
+    <div class="option selected">A cozy rom-com everyone knows by heart</div>
+    <div class="option">Whatever the group wants — you just want to hang</div>
+  </div>
+</div>
+</body>
+</html>

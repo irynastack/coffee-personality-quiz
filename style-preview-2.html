@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 2 - Minimal & Clean</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #FAFAFA;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 56px;
+    max-width: 560px;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .title { font-size: 13px; font-weight: 500; color: #999; letter-spacing: 1px; text-transform: uppercase; }
+  .counter { font-size: 13px; color: #999; }
+  .progress-bar {
+    height: 2px;
+    background: #F0F0F0;
+    border-radius: 1px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .progress-fill {
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    width: 40%;
+    background: #000;
+    border-radius: 1px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1A1A1A;
+    margin-bottom: 36px;
+    line-height: 1.5;
+  }
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option {
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    transition: all 0.15s;
+    font-weight: 400;
+  }
+  .option:hover { border-color: #000; }
+  .option.selected { border-color: #000; background: #000; color: white; }
+  .tag {
+    font-size: 11px;
+    color: #CCC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <span class="title">☕ Style 2: Minimal & Clean</span>
+    <span class="counter">2 / 5</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+  <h1>It's Friday night. You and your friends are picking a movie. What do you choose?</h1>
+  <div class="options">
+    <div class="option">An epic fantasy with a 3-hour runtime</div>
+    <div class="option selected">A cozy rom-com everyone knows by heart</div>
+    <div class="option">Whatever the group wants — you just want to hang</div>
+  </div>
+</div>
+</body>
+</html>
